@@ -5,8 +5,8 @@ const SingleProduct = () => {
     const {data, isError, isLoading} = useGetProductByIdQuery(4);
     console.log(data);
 
-    if(isError) return <h1>Oops something is wrong!</h1>
-    if(isLoading) return <h1>Loading... Please wait!</h1>
+    if(isError) return <h4>Oops something is wrong!</h4>
+    if(isLoading) return <h4>Loading... Please wait!</h4>
 
     return (
         <div>

@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTodo, removeTodo, updateTodo } from "./features/todo/todoSlice";
 import AllProducts from "./components/AllProducts";
 import SingleProduct from "./components/SingleProduct";
+import AddNewProduct from "./components/AddNewProduct";
+import UpdateProduct from "./components/UpdateProduct";
 
 const App = () => {
   const todos = useSelector((state) => state.todo.todos);
@@ -44,6 +46,12 @@ const App = () => {
 
       <h2>Single product</h2>
       <SingleProduct />
+
+      <h2>Add new</h2>
+      <AddNewProduct />
+
+      <h2>Update</h2>
+      <UpdateProduct productId={1} />
     </div>
   );
 };
